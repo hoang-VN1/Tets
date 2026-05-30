@@ -1,5 +1,5 @@
 -- local function scary()
---     warn("❌ This script must only be executed from the offical Bear hud loader")
+--     warn("❌ This script must only be executed from the offical HDZ hud loader")
 --         return
 --     end
 
@@ -36,7 +36,7 @@
 -- end
 -- _G._secondaryData = nil
 -- _G.__userKey = nil
-print("✅ Security verification passed. Loading Bear hud...")
+print("✅ Security verification passed. Loading HDZ hud...")
 -- FIX XÁC ĐỊNH SEA CHO CẢ SERVER THƯỜNG VÀ VIP
 local function detectSea()
     local placeId = game.PlaceId
@@ -120,7 +120,7 @@ spawn(function()
     wait(3)
     local sea = World1 and "Biển 1" or World2 and "Biển 2" or World3 and "Biển 3" or "Không xác định"
     game:GetService("StarterGui"):SetCore("SendNotification", {
-        Title = "Bear Hub",
+        Title = "HDZ Hub",
         Text = "Đang chạy ở " .. sea,
         Duration = 3
     })
@@ -137,7 +137,7 @@ if Update:LoadAnimation() then
 	Update:Loaded();
 end;
 local Library = Update:Window({
-	SubTitle = "by Quang Huy",
+	SubTitle = "by hoang ",
 	Size = UDim2.new(0, 450, 0, 300),
 	TabWidth = 140
 });
@@ -441,16 +441,16 @@ _G.Settings = {
 };
 (getgenv()).Load = function()
 	if readfile and writefile and isfile and isfolder then
-		if not isfolder("Bear hud") then
-			makefolder("Bear hud");
+		if not isfolder("HDZ hud") then
+			makefolder("HDZ hud");
 		end;
-		if not isfolder("Bear hud/Blox Fruits/") then
-			makefolder("Bear hud/Blox Fruits/");
+		if not isfolder("HDZ hud/Blox Fruits/") then
+			makefolder("HDZ hud/Blox Fruits/");
 		end;
-		if not isfile(("Bear Hud/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json")) then
-			writefile("Bear hud/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json", (game:GetService("HttpService")):JSONEncode(_G.Settings));
+		if not isfile(("HDZ Hud/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json")) then
+			writefile("HDZ hud/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json", (game:GetService("HttpService")):JSONEncode(_G.Settings));
 		else
-			local Decode = (game:GetService("HttpService")):JSONDecode(readfile("Bear hud/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json"));
+			local Decode = (game:GetService("HttpService")):JSONDecode(readfile("HDZ hud/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json"));
 			for i, v in pairs(Decode) do
 				_G.Settings[i] = v;
 			end;
@@ -463,15 +463,15 @@ end;
 (getgenv()).SaveSetting = function()
 	if Update:SaveSettings() then
 		if readfile and writefile and isfile and isfolder then
-			if not isfile(("Bear hud/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json")) then
+			if not isfile(("HDZ hud/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json")) then
 				(getgenv()).Load();
 			else
-				local Decode = (game:GetService("HttpService")):JSONDecode(readfile("Bear hud/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json"));
+				local Decode = (game:GetService("HttpService")):JSONDecode(readfile("HDZ hud/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json"));
 				local Array = {};
 				for i, v in pairs(_G.Settings) do
 					Array[i] = v;
 				end;
-				writefile("Bear hud/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json", (game:GetService("HttpService")):JSONEncode(Array));
+				writefile("HDZ hud/Blox Fruits/" .. game.Players.LocalPlayer.Name .. ".json", (game:GetService("HttpService")):JSONEncode(Array));
 			end;
 		else
 			return warn("Status : Undetected Executor");
