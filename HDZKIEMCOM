@@ -6,8 +6,8 @@ local LP=Players.LocalPlayer
 local PG=LP:WaitForChild("PlayerGui")
 
 local CFG={
-	Title="chọn script , hello",
-	Sub="di | hoang",
+	Title="chọn script của hdz, hello",
+	Sub="do | hoang",
 	V1_NAME="HDZ mian3 redz", V2_NAME="HDZ mian real",
 	V1_TAG="Redz", V2_TAG="realhdz",
 	V1_DESC={"No-Key","farm ok","ngon"},
@@ -15,8 +15,8 @@ local CFG={
 	V1_IMG="rbxassetid://73092363986441",
 	V2_IMG="rbxassetid://73092363986441",
 	ANIME_IMG="rbxassetid://85276513122834",
-	V1_URL="https://raw.githubusercontent.com/hoang-VN1/Tets/refs/heads/main/hdzmianredz",
-	V2_URL="https://raw.githubusercontent.com/hoang-VN1/Tets/refs/heads/main/Hdumianreal",
+	V1_URL="loadstring(game:HttpGet("https://raw.githubusercontent.com/hoang-VN1/Tets/refs/heads/main/hdzmianredz"))()",
+	V2_URL="loadstring(game:HttpGet("https://raw.githubusercontent.com/hoang-VN1/Tets/refs/heads/main/Hdumianreal"))()l",
 }
 
 local old=PG:FindFirstChild("PMT_SelectUI") if old then old:Destroy() end
