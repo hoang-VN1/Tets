@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://turbolite.xyz/script/webhookv2.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hoang-VN1/Tets/refs/heads/main/webhookv2.lua"))()
 
 -- Cache all services at start for better performance
 local Services = setmetatable({}, {
@@ -2305,7 +2305,7 @@ QuestNeta = function()
 			[6] = PosQ,
 		};
 	end;
-	local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/refs/heads/main/xRedzLib.lua"))():MakeWindow({
+	local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/hoang-VN1/Tets/refs/heads/main/xRedzLib.lua.txt"))():MakeWindow({
     Title = "HDZ Hub",
     SubTitle = "UI V2 | Blox Fruit",
     SaveFolder = "turbolite.json"
