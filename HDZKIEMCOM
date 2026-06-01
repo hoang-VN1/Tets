@@ -15,8 +15,8 @@ local CFG={
 	V1_IMG="rbxassetid://73092363986441",
 	V2_IMG="rbxassetid://73092363986441",
 	ANIME_IMG="rbxassetid://85276513122834",
-	V1_URL="https://raw.githubusercontent.com/hoang-VN1/hoangfreemium/refs/heads/main/hdzmian2",
-	V2_URL="https://raw.githubusercontent.com/hoang-VN1/hoangfreemium/refs/heads/main/mian1hdz",
+	V1_URL="loadstring(game:HttpGet("https://raw.githubusercontent.com/hoang-VN1/hoangfreemium/refs/heads/main/hdzmian2"))()",
+	V2_URL="loadstring(game:HttpGet("https://raw.githubusercontent.com/hoang-VN1/hoangfreemium/refs/heads/main/mian1hdz"))()",
 }
 
 local old=PG:FindFirstChild("PMT_SelectUI") if old then old:Destroy() end
